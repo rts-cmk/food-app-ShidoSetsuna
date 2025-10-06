@@ -1,0 +1,124 @@
+{
+  "burgers": [
+    {
+      "id": 1,
+      "shortName": "Big Mac",
+      "extraName": "Deluxe",
+      "fullName": "Big Mac Deluxe",
+      "rating": 4.2,
+      "description": "Two all-beef patties, special sauce, lettuce, cheese, pickles, onions on a sesame seed bun. A true classic that never goes out of style.",
+      "price": 8.99,
+      "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 2,
+      "shortName": "Quarter Pounder",
+      "extraName": "with Cheese",
+      "fullName": "Quarter Pounder with Cheese",
+      "rating": 4.5,
+      "description": "Fresh beef that's cooked when you order. A quarter pound of 100% fresh beef that's hot, deliciously juicy and cooked with a pinch of salt and pepper.",
+      "price": 9.49,
+      "img": "https://images.unsplash.com/photo-1551782450-17144efb9c50?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 3,
+      "shortName": "Whopper",
+      "extraName": "Flame-Grilled",
+      "fullName": "Whopper Flame-Grilled",
+      "rating": 4.1,
+      "description": "A flame-grilled beef patty topped with juicy tomatoes, fresh lettuce, creamy mayonnaise, ketchup, crunchy pickles, and sliced white onions on a soft sesame seed bun.",
+      "price": 8.79,
+      "img": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 4,
+      "shortName": "Chicken Royale",
+      "extraName": "Crispy",
+      "fullName": "Chicken Royale Crispy",
+      "rating": 3.8,
+      "description": "Tender chicken breast in a crispy coating, served with fresh lettuce and creamy mayo in a soft bun. Perfect for chicken lovers.",
+      "price": 7.99,
+      "img": "https://images.unsplash.com/photo-1606755962773-d324e2d53014?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 5,
+      "shortName": "Double Cheeseburger",
+      "extraName": "Classic",
+      "fullName": "Double Cheeseburger Classic",
+      "rating": 4.3,
+      "description": "Two beef patties with American cheese, pickles, onions, ketchup and mustard on a regular bun. Simple, classic, and delicious.",
+      "price": 6.49,
+      "img": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 6,
+      "shortName": "Fish Fillet",
+      "extraName": "Ocean Fresh",
+      "fullName": "Fish Fillet Ocean Fresh",
+      "rating": 3.6,
+      "description": "Wild-caught fish fillet in a crispy batter, served with tartar sauce and lettuce on a soft bun. A lighter option that's still satisfying.",
+      "price": 7.29,
+      "img": "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 7,
+      "shortName": "BBQ Bacon",
+      "extraName": "Supreme",
+      "fullName": "BBQ Bacon Supreme",
+      "rating": 4.7,
+      "description": "Juicy beef patty with crispy bacon, BBQ sauce, cheese, lettuce, and onions. For those who love bold, smoky flavors.",
+      "price": 10.99,
+      "img": "https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 8,
+      "shortName": "Veggie Burger",
+      "extraName": "Garden Fresh",
+      "fullName": "Veggie Burger Garden Fresh",
+      "rating": 4.0,
+      "description": "Plant-based patty with fresh vegetables, lettuce, tomato, and special sauce. Delicious and environmentally friendly choice.",
+      "price": 8.49,
+      "img": "https://images.unsplash.com/photo-1525059696034-4967a729002e?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 9,
+      "shortName": "Spicy Chicken",
+      "extraName": "Hot & Crispy",
+      "fullName": "Spicy Chicken Hot & Crispy",
+      "rating": 4.4,
+      "description": "Spicy breaded chicken breast with jalapeños, pepper jack cheese, and spicy mayo. Turn up the heat with this fiery favorite.",
+      "price": 8.99,
+      "img": "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 10,
+      "shortName": "Mushroom Swiss",
+      "extraName": "Gourmet",
+      "fullName": "Mushroom Swiss Gourmet",
+      "rating": 4.6,
+      "description": "Premium beef patty topped with sautéed mushrooms, Swiss cheese, and garlic aioli. An elevated burger experience.",
+      "price": 11.49,
+      "img": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 11,
+      "shortName": "Mini Burger",
+      "extraName": "Kids Size",
+      "fullName": "Mini Burger Kids Size",
+      "rating": 3.9,
+      "description": "Perfect size burger for kids or light appetite. Beef patty with cheese, ketchup, and pickles on a small bun.",
+      "price": 4.99,
+      "img": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 12,
+      "shortName": "Triple Stack",
+      "extraName": "Monster",
+      "fullName": "Triple Stack Monster",
+      "rating": 4.8,
+      "description": "Three beef patties, three slices of cheese, bacon, lettuce, tomato, and special sauce. Only for the truly hungry!",
+      "price": 13.99,
+      "img": "https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400&h=300&fit=crop"
+    }
+  ]
+}

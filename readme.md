@@ -1,25 +1,16 @@
-# Opgavebeskrivelse: Byg en simpel 3-siders web-app
+# React + Vite
 
-I denne opgave skal I bygge en simpel web-applikation med tre sider baseret på det udleverede Figma-design. 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Krav:
-1. **Design og struktur**: Følg det udleverede Figma-design nøje. Sørg for, at layoutet og stilen på hver side matcher designet.
-2. **Navigation**: Implementer navigation, så brugerne kan bevæge sig mellem de tre sider.
-3. **Indhold**: Hver side skal indeholde relevant indhold som angivet i Figma-designet.
+Currently, two official plugins are available:
 
-## Ekstra opgave:
-- Implementer en søgefunktion, der kan bruges til at søge i indholdet på siderne.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## React Compiler
 
-## Aflevering:
-Når I er færdige med opgaven, skal I pushe jeres kode til GitHub. 
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## Expanding the ESLint configuration
 
-
-## Sådan åbner du en Figma-fil
-
-1. **Opret en Figma-konto**: Hvis du ikke allerede har en, kan du oprette en gratis konto på [figma.com](https://www.figma.com).
-2. **Log ind**: Log ind på din Figma-konto.
-3. **Upload filen**: Klik på "New File" og derefter "Import File" for at uploade den Figma-fil, du har modtaget.
-
-Når filen er åbnet, kan du bruge designet som reference til din web-app.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
