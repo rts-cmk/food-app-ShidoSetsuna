@@ -1,0 +1,139 @@
+.home-container {
+  min-height: 100vh;
+  padding: 20px 20px 100px 20px; /* Added bottom padding for navbar */
+}
+
+.home-header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.app-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 400;
+  margin: 0;
+}
+
+.profile-link {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 11px;
+  object-fit: cover;
+  border: 2px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.profile-image:hover {
+  border-color: #ff4444;
+  transform: scale(1.05);
+}
+
+.search-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Main content styles */
+.home-main {
+  max-width: 1200px;
+  margin: 32px auto 0;
+}
+
+/* Burger grid styles */
+.burgers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 0;
+}
+
+/* Loading and error states */
+.loading-state,
+.error-state,
+.empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  color: #666;
+}
+
+.loading-state p {
+  font-size: 1.1rem;
+  animation: pulse 2s infinite;
+}
+
+.error-state p {
+  color: #e74c3c;
+  font-size: 1rem;
+}
+
+.empty-state p {
+  font-size: 1rem;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 16px;
+  }
+
+  .home-main {
+    margin-top: 24px;
+  }
+
+  .burgers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 20px;
+  }
+
+  .header-top {
+    margin-bottom: 20px;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .app-subtitle {
+    font-size: 1rem;
+  }
+
+  .profile-link {
+    margin-left: 16px;
+  }
+}

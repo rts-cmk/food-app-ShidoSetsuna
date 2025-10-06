@@ -38,7 +38,7 @@
       "rating": 3.8,
       "description": "Tender chicken breast in a crispy coating, served with fresh lettuce and creamy mayo in a soft bun. Perfect for chicken lovers.",
       "price": 7.99,
-      "img": "https://images.unsplash.com/photo-1606755962773-d324e2d53014?w=400&h=300&fit=crop"
+      "img": "https://burgerking.com.cy/sites/default/files/Chicken%20Royale-01_2.png"
     },
     {
       "id": 5,
@@ -58,14 +58,14 @@
       "rating": 3.6,
       "description": "Wild-caught fish fillet in a crispy batter, served with tartar sauce and lettuce on a soft bun. A lighter option that's still satisfying.",
       "price": 7.29,
-      "img": "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=400&h=300&fit=crop"
+      "img": "https://platedcravings.com/wp-content/uploads/2022/03/Air-Fryer-Breaded-Fish-Plated-Cravings-6.jpg"
     },
     {
       "id": 7,
       "shortName": "BBQ Bacon",
       "extraName": "Supreme",
       "fullName": "BBQ Bacon Supreme",
-      "rating": 4.7,
+      "rating": 4.6,
       "description": "Juicy beef patty with crispy bacon, BBQ sauce, cheese, lettuce, and onions. For those who love bold, smoky flavors.",
       "price": 10.99,
       "img": "https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=400&h=300&fit=crop"
@@ -108,7 +108,7 @@
       "rating": 3.9,
       "description": "Perfect size burger for kids or light appetite. Beef patty with cheese, ketchup, and pickles on a small bun.",
       "price": 4.99,
-      "img": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop"
+      "img": "https://panesco.com/getmetafile/da0e956e-297e-40e6-add7-5456096dc364/5001929.jpg.aspx?"
     },
     {
       "id": 12,
