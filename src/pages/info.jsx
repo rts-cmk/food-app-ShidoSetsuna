@@ -108,7 +108,7 @@ function Info() {
           />
         </div>
 
-        <div className="burger-details-section">
+        <section className="burger-details-section">
           <div className="burger-info">
             <h2 className="burger-title">{burger.fullName}</h2>
 
@@ -124,7 +124,7 @@ function Info() {
               <p className="burger-description">{burger.description}</p>
             </div>
 
-            <section className="customization-section">
+            <div className="customization-section">
               <article className="spiciness-section">
                 <h3 className="section-title">Spicy</h3>
                 <div className="spiciness-slider">
@@ -133,11 +133,13 @@ function Info() {
                       <div
                         className="slider-fill"
                         style={{
-                          width: `${((spiciness - 1) / 2) * 100}%`,
+                          width: `${((spiciness - 1) / 3) * 100}%`,
                           backgroundColor:
                             spiciness === 1
-                              ? "#e0e0e0"
+                              ? "#de6f35"
                               : spiciness === 2
+                              ? "#09a247"
+                              : spiciness === 3
                               ? "#ff9800"
                               : "#e53e3e",
                         }}></div>
@@ -145,7 +147,7 @@ function Info() {
                     <input
                       type="range"
                       min="1"
-                      max="3"
+                      max="4"
                       value={spiciness}
                       onChange={(e) => setSpiciness(parseInt(e.target.value))}
                       className="spicy-range"
@@ -175,12 +177,14 @@ function Info() {
                   </button>
                 </div>
               </article>
-            </section>
+            </div>
           </div>
-        </div>
+        </section>
 
         <div className="action-buttons">
-          <span className="price-text">${burger.price}</span>
+          <span className="price-text">
+            ${(burger.price * quantity).toFixed(2)}
+          </span>
           <button className="add-to-cart-btn">ORDER NOW</button>
         </div>
       </main>

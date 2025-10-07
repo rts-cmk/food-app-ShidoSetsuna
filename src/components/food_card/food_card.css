@@ -109,6 +109,10 @@
   color: #ff4444;
 }
 
+.favorited svg path {
+  fill: #ff4444;
+}
+
 .heart-icon {
   width: 20px;
   height: 20px;

@@ -1,12 +1,55 @@
+import { useState, useEffect } from "react";
 import "./food_card.css";
 
 export default function FoodCard({
+  id,
   image,
   shortName,
   extraName,
   rating,
   onClick,
+  onFavoriteChange,
 }) {
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  //Check onload if this item is in the favorite localstorage
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const itemExists = favorites.some((item) => item.id === id);
+    setIsFavorite(itemExists);
+  }, [id]);
+
+  const handleFavoriteClick = (e) => {
+    e.stopPropagation();
+
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    // Use id instead of key for comparison
+    const itemExists = favorites.some((item) => item.id === id);
+
+    if (itemExists) {
+      alert(`${shortName} removed from favorites!`);
+      favorites = favorites.filter((item) => item.id !== id);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      setIsFavorite(false);
+      onFavoriteChange && onFavoriteChange(); // Notify parent component
+      return;
+    }
+
+    // Store the burger data with id
+    favorites.push({
+      id,
+      shortName,
+      extraName,
+      rating,
+      image, // Also store image for display in favorites page
+    });
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+    alert(`${shortName} added to favorites!`);
+    setIsFavorite(true);
+    onFavoriteChange && onFavoriteChange(); // Notify parent component
+  };
+
   return (
     <div className="food-card" onClick={onClick}>
       <div className="food-image-container">
@@ -26,7 +69,9 @@ export default function FoodCard({
           </div>
         </div>
 
-        <button className="favorite-btn" onClick={(e) => e.stopPropagation()}>
+        <button
+          className={`favorite-btn ${isFavorite ? "favorited" : ""}`}
+          onClick={handleFavoriteClick}>
           <svg
             width="24"
             height="24"

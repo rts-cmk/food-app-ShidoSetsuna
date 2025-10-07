@@ -93,6 +93,7 @@ function Home() {
             {filteredBurgers.map((burger) => (
               <FoodCard
                 key={burger.id}
+                id={burger.id}
                 image={burger.img}
                 shortName={burger.shortName}
                 extraName={burger.extraName}

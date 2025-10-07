@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/home.jsx";
 import Info from "./pages/info.jsx";
 import Profile from "./pages/profile.jsx";
+import Favourites from "./pages/favourites.jsx";
 import ErrorPage from "./pages/error.jsx";
 import Layout from "./components/layout/Layout.jsx";
 import "./style/main.css";
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "favorites",
-        element: <Home />,
+        element: <Favourites />,
       },
       {
         path: "add",
