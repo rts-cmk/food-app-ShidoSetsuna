@@ -9,12 +9,11 @@
   background-color: #e53e3e;
   display: flex;
   position: relative;
-  bottom: 0;
+  bottom: -8px;
   width: 100%;
   border-radius: 8px 8px 0 0;
   justify-content: space-around;
 
-  /* Create a circular mask that moves with the bullet */
   mask: radial-gradient(
       circle at calc((100% / 5) * (var(--bullet-index) - 1) + (100% / 5) / 2) -20%,
       transparent 25px,
@@ -23,7 +22,6 @@
     linear-gradient(black, black);
   mask-composite: subtract;
 
-  /* Webkit fallback */
   -webkit-mask: radial-gradient(
       circle at calc((100% / 5) * (var(--bullet-index) - 1) + (100% / 5) / 2) -20%,
       transparent 25px,
@@ -112,7 +110,6 @@
   height: 24px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
   .navbar {
     padding: 0 10px;
@@ -122,9 +119,9 @@
   .bullet {
     width: 40px;
     height: 40px;
-    /* left: calc(
+    left: calc(
       (100% / 5) * (var(--bullet-index) - 1) + (100% / 5) / 2 - 22.5px
-    ); */
+    );
   }
 
   .bullet-inside {
@@ -141,7 +138,6 @@
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
   .navbar {
     padding: 0 10px;
@@ -167,7 +163,6 @@
   }
 }
 
-/* Enhanced animation for the swooping effect */
 .navbar-background::before {
   content: "";
   position: absolute;
@@ -180,7 +175,6 @@
   transition: left 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* Add shadow for depth */
 .navbar-background {
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
 }
