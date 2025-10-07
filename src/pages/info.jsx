@@ -7,7 +7,7 @@ function Info() {
   const [burger, setBurger] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [spiciness, setSpiciness] = useState(1); // 1 = Mild, 2 = Medium, 3 = Hot
+  const [spiciness, setSpiciness] = useState(1);
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
@@ -68,7 +68,17 @@ function Info() {
     <div className="info-container">
       <header className="info-header">
         <Link to="/" className="back-button">
-          ←
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M22.1666 12.25H11.9081L14.7536 9.40448C15.0819 9.07635 15.2664 8.63123 15.2665 8.16706C15.2666 7.7029 15.0823 7.2577 14.7542 6.9294C14.426 6.60111 13.9809 6.41661 13.5167 6.4165C13.0526 6.41639 12.6074 6.60068 12.2791 6.92882L8.09542 11.1125C7.33098 11.879 6.9017 12.9174 6.9017 14C6.9017 15.0826 7.33098 16.1209 8.09542 16.8875L12.2791 21.0712C12.6074 21.3993 13.0526 21.5836 13.5167 21.5835C13.9809 21.5834 14.426 21.3989 14.7542 21.0706C15.0823 20.7423 15.2666 20.2971 15.2665 19.8329C15.2664 19.3687 15.0819 18.9236 14.7536 18.5955L11.9081 15.75H22.1666C22.6307 15.75 23.0758 15.5656 23.404 15.2374C23.7322 14.9092 23.9166 14.4641 23.9166 14C23.9166 13.5359 23.7322 13.0907 23.404 12.7625C23.0758 12.4344 22.6307 12.25 22.1666 12.25Z"
+              fill="#3C2F2F"
+            />
+          </svg>
         </Link>
         <Link to="/" className="back-button">
           <svg
@@ -78,7 +88,7 @@ function Info() {
             height="24"
             viewBox="0 0 24 24"
             strokeWidth="2"
-            stroke="currentColor"
+            stroke="black"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round">
@@ -100,9 +110,7 @@ function Info() {
 
         <div className="burger-details-section">
           <div className="burger-info">
-            <h2 className="burger-title">
-              {burger.shortName} {burger.extraName}
-            </h2>
+            <h2 className="burger-title">{burger.fullName}</h2>
 
             <div className="rating-price-row">
               <div className="rating-display">
@@ -116,9 +124,8 @@ function Info() {
               <p className="burger-description">{burger.description}</p>
             </div>
 
-            <div className="customization-section">
-              {/* Spiciness Slider */}
-              <div className="spiciness-section">
+            <section className="customization-section">
+              <article className="spiciness-section">
                 <h3 className="section-title">Spicy</h3>
                 <div className="spiciness-slider">
                   <div className="slider-container">
@@ -134,25 +141,24 @@ function Info() {
                               ? "#ff9800"
                               : "#e53e3e",
                         }}></div>
-                      <input
-                        type="range"
-                        min="1"
-                        max="3"
-                        value={spiciness}
-                        onChange={(e) => setSpiciness(parseInt(e.target.value))}
-                        className="spicy-range"
-                      />
                     </div>
+                    <input
+                      type="range"
+                      min="1"
+                      max="3"
+                      value={spiciness}
+                      onChange={(e) => setSpiciness(parseInt(e.target.value))}
+                      className="spicy-range"
+                    />
                   </div>
                   <div className="spicy-labels">
                     <span className="spicy-label">Mild</span>
                     <span className="spicy-label">Hot</span>
                   </div>
                 </div>
-              </div>
+              </article>
 
-              {/* Quantity Selector */}
-              <div className="quantity-section">
+              <article className="quantity-section">
                 <h3 className="section-title">Portion</h3>
                 <div className="quantity-selector">
                   <button
@@ -168,8 +174,8 @@ function Info() {
                     +
                   </button>
                 </div>
-              </div>
-            </div>
+              </article>
+            </section>
           </div>
         </div>
 

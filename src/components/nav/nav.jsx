@@ -1,20 +1,24 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router";
 import "./nav.css";
+import commentIcon from "../../assets/comment.svg";
+import heartIcon from "../../assets/heart.svg";
+import homeIcon from "../../assets/home.svg";
+import plusIcon from "../../assets/plus.svg";
+import userIcon from "../../assets/user.svg";
 
 const navItems = [
-  { id: "home", icon: "🏠", path: "/" },
-  { id: "profile", icon: "👤", path: "/profile" },
-  { id: "add", icon: "+", path: "/add" },
-  { id: "menu", icon: "☰", path: "/menu" },
-  { id: "favorites", icon: "❤️", path: "/favorites" },
+  { id: "home", icon: homeIcon, path: "/" },
+  { id: "profile", icon: userIcon, path: "/profile" },
+  { id: "add", icon: plusIcon, path: "/add" },
+  { id: "menu", icon: commentIcon, path: "/menu" },
+  { id: "favorites", icon: heartIcon, path: "/favorites" },
 ];
 
 export default function Nav() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Find current active index based on current path
   const getCurrentIndex = () => {
     const currentItem = navItems.find(
       (item) => item.path === location.pathname
@@ -38,17 +42,21 @@ export default function Nav() {
             className="nav-item"
             data-index={index + 1}
             onClick={() => handleNavClick(index, item.path)}>
-            <span
-              className={`icon-item ${index === activeIndex ? "active" : ""}`}>
-              {item.icon}
-            </span>
+            <img
+              src={item.icon}
+              alt={item.id}
+              className={`icon-item ${index === activeIndex ? "active" : ""}`}
+            />
           </div>
         ))}
 
-        {/* The bullet (floating circle) */}
         <div className="bullet" style={{ "--bullet-index": activeIndex + 1 }}>
           <div className="bullet-inside">
-            <span className="bullet-icon">{navItems[activeIndex].icon}</span>
+            <img
+              src={navItems[activeIndex].icon}
+              alt={navItems[activeIndex].id}
+              className="bullet-icon"
+            />
           </div>
         </div>
       </div>

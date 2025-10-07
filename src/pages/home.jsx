@@ -7,11 +7,12 @@ import FoodCard from "../components/food_card/food_card.jsx";
 
 function Home() {
   const navigate = useNavigate();
-  const [burgers, setBurgers] = useState([]);
+  const [allBurgers, setAllBurgers] = useState([]);
+  const [filteredBurgers, setFilteredBurgers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch burger data on component mount
+  // Fetch burger data
   useEffect(() => {
     const fetchBurgers = async () => {
       try {
@@ -23,7 +24,9 @@ function Home() {
         }
 
         const data = await response.json();
-        setBurgers(data.burgers || []);
+        const burgersData = data.burgers || [];
+        setAllBurgers(burgersData);
+        setFilteredBurgers(burgersData);
       } catch (err) {
         console.error("Error fetching burgers:", err);
         setError("Failed to load burgers. Please try again later.");
@@ -35,9 +38,23 @@ function Home() {
     fetchBurgers();
   }, []);
 
-  // Handle card click to navigate to details page
   const handleCardClick = (burgerId) => {
     navigate(`/info/${burgerId}`);
+  };
+
+  const handleSearch = (query) => {
+    if (!query || query.trim() === "") {
+      setFilteredBurgers(allBurgers);
+      return;
+    }
+
+    const filtered = allBurgers.filter(
+      (burger) =>
+        burger.shortName.toLowerCase().includes(query.toLowerCase()) ||
+        burger.fullName.toLowerCase().includes(query.toLowerCase()) ||
+        burger.extraName.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredBurgers(filtered);
   };
 
   return (
@@ -54,7 +71,7 @@ function Home() {
         </div>
 
         <div className="search-section">
-          <Search />
+          <Search onSearch={handleSearch} />
         </div>
       </header>
 
@@ -73,7 +90,7 @@ function Home() {
 
         {!loading && !error && (
           <div className="burgers-grid">
-            {burgers.map((burger) => (
+            {filteredBurgers.map((burger) => (
               <FoodCard
                 key={burger.id}
                 image={burger.img}
@@ -86,9 +103,20 @@ function Home() {
           </div>
         )}
 
-        {!loading && !error && burgers.length === 0 && (
+        {!loading &&
+          !error &&
+          filteredBurgers.length === 0 &&
+          allBurgers.length > 0 && (
+            <div className="empty-state">
+              <p>
+                No burgers found matching your search. Try a different keyword!
+              </p>
+            </div>
+          )}
+
+        {!loading && !error && allBurgers.length === 0 && (
           <div className="empty-state">
-            <p>No burgers available at the moment.</p>
+            <p>{`No burgers available at the moment. :(((((((((`}</p>
           </div>
         )}
       </main>

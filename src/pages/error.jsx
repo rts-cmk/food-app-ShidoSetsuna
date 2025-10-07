@@ -3,14 +3,12 @@ import { useRouteError, Link } from "react-router";
 function ErrorPage() {
   const error = useRouteError();
 
-  // Helper function to get error status code
   const getErrorStatus = () => {
     if (error?.status) return error.status;
     if (error?.response?.status) return error.response.status;
     return null;
   };
 
-  // Helper function to get error message
   const getErrorMessage = () => {
     if (error?.statusText) return error.statusText;
     if (error?.message) return error.message;
@@ -21,7 +19,6 @@ function ErrorPage() {
   const errorStatus = getErrorStatus();
   const errorMessage = getErrorMessage();
 
-  // Custom messages for common error codes
   const getStatusMessage = (status) => {
     switch (status) {
       case 404:

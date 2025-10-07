@@ -114,7 +114,6 @@
   height: 20px;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .food-card {
     max-width: 100%;

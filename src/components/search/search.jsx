@@ -1,10 +1,29 @@
 import "./search.css";
+import { useState } from "react";
 
-export default function Search() {
+export default function Search({ onSearch }) {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSearch(searchQuery);
+  };
+
+  const handleInputChange = (event) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+    onSearch(query);
+  };
+
+  // No work :(
+  const handleSearchClick = () => {
+    onSearch(searchQuery);
+  };
+
   return (
     <div className="search-container">
-      <div className="search-input-group">
-        <button className="search-button">
+      <form className="search-input-group" onSubmit={handleSubmit}>
+        <button type="button" className="search-button">
           <svg
             width="20"
             height="20"
@@ -20,8 +39,14 @@ export default function Search() {
             />
           </svg>
         </button>
-        <input type="text" placeholder="Search" className="search-input" />
-      </div>
+        <input
+          type="text"
+          placeholder="Search"
+          className="search-input"
+          value={searchQuery}
+          onChange={handleInputChange}
+        />
+      </form>
 
       <button className="filter-button">
         <svg
