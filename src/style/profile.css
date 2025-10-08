@@ -28,9 +28,9 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  background: white;
+  background: var(--color-white);
   border-radius: 12px;
-  color: #333;
+  color: var(--color-black);
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
@@ -46,10 +46,10 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  background: white;
+  background: var(--color-white);
   border: none;
   border-radius: 12px;
-  color: #333;
+  color: var(--color-black);
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
@@ -82,7 +82,7 @@
 }
 
 .profile-info-box {
-  background: white;
+  background: var(--color-white);
   border-radius: 20px;
   padding: 60px 24px 24px;
   width: 100%;
@@ -106,7 +106,7 @@
 .profile-field label {
   font-size: 14px;
   font-weight: 500;
-  color: #666;
+  color: var(--color-gray);
   margin-bottom: 4px;
 }
 
@@ -116,7 +116,7 @@
   border-radius: 12px;
   padding: 16px;
   font-size: 16px;
-  color: #333;
+  color: var(--color-black);
   width: 100%;
   font-family: inherit;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -130,7 +130,7 @@
 
 .profile-input:disabled {
   background: #f1f3f4;
-  color: #666;
+  color: var(--color-gray);
   cursor: not-allowed;
   border-color: #ddd;
 }
@@ -187,8 +187,8 @@
 }
 
 .edit-profile-btn {
-  background: #3c2f2f;
-  color: white;
+  background: var(--color-black);
+  color: var(--color-white);
   border: none;
   border-radius: 12px;
   padding: 16px 24px;
@@ -206,9 +206,9 @@
 }
 
 .logout-btn {
-  background: white;
-  color: #e53e3e;
-  border: 2px solid #e53e3e;
+  background: var(--color-white);
+  color: var(--color-red);
+  border: 2px solid var(--color-red);
   border-radius: 12px;
   padding: 16px 24px;
   font-size: 16px;
@@ -230,7 +230,7 @@
 
 .save-profile-btn {
   background: linear-gradient(135deg, #ff6b6b, #ed3141);
-  color: white;
+  color: var(--color-white);
   border: none;
   border-radius: 12px;
   padding: 16px 24px;
@@ -251,8 +251,8 @@
 }
 
 .cancel-btn {
-  background: white;
-  color: #666;
+  background: var(--color-white);
+  color: var(--color-gray);
   border: 2px solid #e9ecef;
   border-radius: 12px;
   padding: 16px 24px;
@@ -269,7 +269,7 @@
 .cancel-btn:hover {
   background: #f8f9fa;
   border-color: #999;
-  color: #333;
+  color: var(--color-black);
   transform: translateY(-1px);
 }
 

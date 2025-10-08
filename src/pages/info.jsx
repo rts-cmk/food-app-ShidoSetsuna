@@ -1,6 +1,7 @@
 import "../style/main.css";
 import { Link, useParams } from "react-router";
 import { useState, useEffect } from "react";
+import FavoriteButton from "../components/favorite-button/favorite-button.jsx";
 
 function Info() {
   const { id } = useParams();
@@ -9,6 +10,10 @@ function Info() {
   const [error, setError] = useState(null);
   const [spiciness, setSpiciness] = useState(1);
   const [quantity, setQuantity] = useState(1);
+
+  const handleFavoriteChange = (isFavorited, id) => {
+    console.log("Favorite status changed:", isFavorited, id);
+  };
 
   useEffect(() => {
     const fetchBurger = async () => {
@@ -111,6 +116,17 @@ function Info() {
         <section className="burger-details-section">
           <div className="burger-info">
             <h2 className="burger-title">{burger.fullName}</h2>
+            <FavoriteButton
+              className="info-favorite-button"
+              id={id}
+              shortName={burger.shortName}
+              extraName={burger.extraName}
+              rating={burger.rating}
+              image={burger.img}
+              onFavoriteChange={handleFavoriteChange}
+              size="medium"
+              showAnimation={true}
+            />
 
             <div className="rating-price-row">
               <div className="rating-display">

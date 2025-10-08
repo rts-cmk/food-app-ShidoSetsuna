@@ -1,7 +1,7 @@
 .info-container {
   min-height: 100vh;
   padding: 20px 20px 100px 20px;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-gray);
 }
 
 .info-header {
@@ -13,7 +13,7 @@
 }
 
 .back-button {
-  color: #e53e3e;
+  color: var(--color-red);
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
@@ -31,13 +31,13 @@
 .info-header h1 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
+  color: var(--color-black);
 }
 
 .info-main {
   max-width: 1200px;
   margin: 0 auto;
-  background: #f8f9fa;
+  background: var(--color-light-gray);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -59,19 +59,20 @@
 }
 
 .burger-info {
+  position: relative;
   max-width: 600px;
 }
 
 .burger-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #333;
+  color: var(--color-black);
   margin-bottom: 8px;
 }
 
 .burger-subtitle {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--color-gray);
   margin-bottom: 20px;
 }
 
@@ -90,7 +91,7 @@
 
 .delivery-text {
   font-size: 1rem;
-  color: #666;
+  color: var(--color-gray);
 }
 
 .star-icon-info {
@@ -101,7 +102,7 @@
 .rating-text {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #333;
+  color: var(--color-black);
 }
 
 .price-display {
@@ -112,8 +113,8 @@
 .price-text {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #ffffff;
-  background-color: #e53e3e;
+  color: var(--color-white);
+  background-color: var(--color-red);
   padding: 22px;
   border-radius: 20px;
 }
@@ -125,7 +126,7 @@
 .description-section h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #333;
+  color: var(--color-black);
   margin-bottom: 12px;
 }
 
@@ -153,8 +154,14 @@
 .section-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #333;
+  color: var(--color-black);
   margin-bottom: 12px;
+}
+
+.info-favorite-button {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .spicy-labels {
@@ -164,11 +171,11 @@
 }
 
 .spicy-labels .spicy-label:first-child {
-  color: #4caf50;
+  color: var(--color-green);
 }
 
 .spicy-labels .spicy-label:last-child {
-  color: #e53e3e;
+  color: var(--color-red);
 }
 
 .spiciness-slider {
@@ -225,20 +232,20 @@
   -webkit-appearance: none;
   width: 15px;
   height: 20px;
-  background: #e53e3e;
+  background: var(--color-red);
   border-radius: 6px;
   cursor: pointer;
-  border: 3px solid white;
+  border: 3px solid var(--color-white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .spicy-range::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: #e53e3e;
+  background: var(--color-red);
   border-radius: 50%;
   cursor: pointer;
-  border: 3px solid white;
+  border: 3px solid var(--color-white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -253,8 +260,8 @@
   height: 40px;
   border-radius: 8px;
   border: none;
-  background: #e53e3e;
-  color: white;
+  background: var(--color-red);
+  color: var(--color-white);
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
@@ -286,7 +293,7 @@
 .quantity-display {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #333;
+  color: var(--color-black);
   min-width: 24px;
   text-align: center;
 }
@@ -299,8 +306,8 @@
 
 .add-to-cart-btn {
   flex: 1;
-  background: #3c2f2f;
-  color: white;
+  background: var(--color-black);
+  color: var(--color-white);
   border: none;
   padding: 24px 24px;
   border-radius: 20px;
@@ -331,7 +338,7 @@
 
 .action-buttons .favorite-btn:hover {
   background: #e0e0e0;
-  color: #e53e3e;
+  color: var(--color-red);
   transform: scale(1.05);
 }
 
@@ -339,7 +346,7 @@
 .info-container .error-state {
   text-align: center;
   padding: 48px 20px;
-  color: #666;
+  color: var(--color-gray);
 }
 
 .info-container .loading-state p {

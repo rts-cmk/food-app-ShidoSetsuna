@@ -1,6 +1,6 @@
 .favorites-container {
   min-height: 100vh;
-  background: #f8f9fa;
+  background: var(--color-light-gray);
   padding-bottom: 80px;
 }
 
@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background: white;
+  background: var(--color-white);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -35,7 +35,7 @@
 .page-title {
   font-size: 24px;
   font-weight: 700;
-  color: #333;
+  color: var(--color-black);
   margin: 0;
   text-align: center;
   flex: 1;
@@ -54,7 +54,7 @@
   justify-content: center;
   align-items: center;
   min-height: 200px;
-  color: #666;
+  color: var(--color-gray);
   font-size: 16px;
 }
 
@@ -75,20 +75,20 @@
 
 .empty-favorites h2 {
   font-size: 24px;
-  color: #333;
+  color: var(--color-black);
   margin: 0 0 10px 0;
 }
 
 .empty-favorites p {
   font-size: 16px;
-  color: #666;
+  color: var(--color-gray);
   margin: 0 0 30px 0;
   max-width: 300px;
 }
 
 .browse-button {
   background: linear-gradient(135deg, #ff6b6b, #ed3141);
-  color: white;
+  color: var(--color-white);
   text-decoration: none;
   padding: 14px 28px;
   border-radius: 12px;
@@ -113,10 +113,10 @@
 .favorites-footer {
   text-align: center;
   padding: 20px;
-  color: #666;
+  color: var(--color-gray);
   font-size: 14px;
   border-top: 1px solid #e9ecef;
-  background: white;
+  background: var(--color-white);
   border-radius: 12px;
   margin-top: 20px;
 }

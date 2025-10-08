@@ -33,6 +33,11 @@ export default function Nav() {
     navigate(path);
   };
 
+  //Update active index on location change
+  useEffect(() => {
+    setActiveIndex(getCurrentIndex());
+  }, [location.pathname]);
+
   return (
     <div className="parent-navbar">
       <div className="navbar">

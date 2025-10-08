@@ -25,14 +25,14 @@
 .app-title {
   font-size: 2.4rem;
   font-weight: 500;
-  color: #333;
+  color: var(--color-black);
   margin-bottom: 8px;
   font-family: "Lobster", sans-serif;
 }
 
 .app-subtitle {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--color-gray);
   font-weight: 500;
   margin: 0;
 }
@@ -52,7 +52,7 @@
 }
 
 .profile-image:hover {
-  border-color: #ff4444;
+  border-color: var(--color-red);
   transform: scale(1.05);
 }
 
@@ -79,7 +79,7 @@
 .empty-state {
   text-align: center;
   padding: 48px 20px;
-  color: #666;
+  color: var(--color-gray);
 }
 
 .loading-state p {

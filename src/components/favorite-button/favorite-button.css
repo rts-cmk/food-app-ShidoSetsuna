@@ -1,0 +1,110 @@
+.favorite-btn {
+  background: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: var(--color-gray);
+}
+
+.favorite-btn:hover {
+  background: var(--color-white);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-btn.favorited {
+  color: var(--color-red);
+  background: var(--color-white);
+}
+
+.favorite-btn.favorited:hover {
+  color: var(--color-red);
+  transform: scale(1.1);
+}
+
+/* Size variants */
+.favorite-btn-small {
+  width: 32px;
+  height: 32px;
+}
+
+.favorite-btn-small .heart-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.favorite-btn-medium {
+  width: 40px;
+  height: 40px;
+}
+
+.favorite-btn-medium .heart-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.favorite-btn-large {
+  width: 48px;
+  height: 48px;
+}
+
+.favorite-btn-large .heart-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Animation variant */
+.favorite-btn.animated.favorited {
+  animation: heartPop 0.3s ease-in-out;
+}
+
+@keyframes heartPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Heart icon styling */
+.heart-icon {
+  transition: all 0.2s ease;
+}
+
+.favorite-btn:active .heart-icon {
+  transform: scale(0.9);
+}
+
+.favorite-btn:focus {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+.favorite-btn:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.favorite-btn-absolute {
+  position: absolute;
+}
+
+.favorite-btn-fixed {
+  position: fixed;
+}
+
+.favorite-btn-floating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}

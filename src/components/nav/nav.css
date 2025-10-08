@@ -6,7 +6,7 @@
 }
 
 .navbar {
-  background-color: #e53e3e;
+  background-color: var(--color-red);
   display: flex;
   position: relative;
   bottom: -8px;
@@ -55,7 +55,7 @@
 .bullet {
   width: 50px;
   position: absolute;
-  background-color: #e53e3e;
+  background-color: var(--color-red);
   border-radius: 50%;
   height: 50px;
   top: -20%;
@@ -67,7 +67,7 @@
 }
 
 .bullet-inside {
-  background-color: #e53e3e;
+  background-color: var(--color-red);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -86,7 +86,7 @@
   right: 100%;
   bottom: 0;
   border-top-right-radius: 9999px;
-  box-shadow: 0px -9px 0 0 #e53e3e00;
+  box-shadow: 0px -9px 0 0 transparent;
   border: 0px solid transparent;
 }
 
@@ -99,12 +99,12 @@
   left: 100%;
   bottom: 0;
   border-top-left-radius: 9999px;
-  box-shadow: 0px -9px 0 0 #e53e3e00;
+  box-shadow: 0px -9px 0 0 transparent;
 }
 
 .bullet-icon {
   font-size: 18px;
-  color: #e53e3e;
+  color: var(--color-red);
   font-weight: bold;
   width: 24px;
   height: 24px;
@@ -170,7 +170,7 @@
   left: calc(var(--active-index) * 20% - 30px);
   width: 60px;
   height: 40px;
-  background: #e53e3e;
+  background: var(--color-red);
   border-radius: 50%;
   transition: left 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
