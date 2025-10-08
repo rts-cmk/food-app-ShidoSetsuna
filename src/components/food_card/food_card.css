@@ -1,0 +1,167 @@
+.food-card {
+  position: relative;
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 280px;
+  width: 100%;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.food-image-container {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: var(--color-light-gray);
+}
+
+.food-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.food-card:hover .food-image {
+  transform: scale(1.05);
+}
+
+.food-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.food-text {
+  flex: 1;
+}
+
+.food-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.food-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.food-rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-icon {
+  color: #ffc107;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.rating-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.favorite-btn {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.favorite-btn:hover {
+  background-color: var(--color-light-gray);
+  color: var(--color-red);
+}
+
+.favorite-btn.active {
+  color: var(--color-red);
+}
+
+.favorited svg path {
+  fill: var(--color-red);
+}
+
+.heart-icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .food-card {
+    max-width: 100%;
+    padding: 14px;
+  }
+
+  .food-image-container {
+    height: 160px;
+    margin-bottom: 14px;
+  }
+
+  .food-name {
+    font-size: 1.1rem;
+  }
+
+  .food-subtitle {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-card {
+    padding: 12px;
+  }
+
+  .food-image-container {
+    height: 140px;
+    margin-bottom: 12px;
+  }
+
+  .food-name {
+    font-size: 1rem;
+  }
+
+  .food-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .favorite-btn {
+    padding: 6px;
+  }
+
+  .heart-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
